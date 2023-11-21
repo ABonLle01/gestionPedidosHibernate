@@ -19,33 +19,31 @@ import java.util.ResourceBundle;
 public class LoginController implements Initializable {
 
     @FXML
-    private Button btnLogin;
-    @FXML
-    private Button btnCancel;
-    @FXML
     private Label info;
     @FXML
-    private TextField txtUser;
+    private TextField txtEmail;
     @FXML
     private PasswordField txtPassword;
+    @FXML
+    private Button btnAcceder;
 
     @FXML
     public void login(ActionEvent actionEvent) {
-        String user = txtUser.getText();
+        String email = txtEmail.getText();
         String pass = txtPassword.getText();
 
-        if(user.length()<4 || pass.length()<4){
+        if(email.length()<4 || pass.length()<4){
             info.setText("Introduce los datos");
             info.setStyle("-fx-background-color: red; -fx-text-fill: white;");
 
         }else{
-            User u = (new UserDAO()).validateUser(user,pass);
+            User u = (new UserDAO()).validateUser(email,pass);
 
             if(u==null) {
                 info.setText("No encontrado");
                 info.setStyle("-fx-background-color: red; -fx-text-fill: white;");
             }else{
-                info.setText("Usuario: "+user+"("+pass+") correcto");
+                info.setText("Usuario: "+email+"("+pass+") correcto");
                 info.setStyle("-fx-background-color: green; -fx-text-fill: white;");
 
                 Session.setCurentUser(u);
@@ -63,10 +61,10 @@ public class LoginController implements Initializable {
 
     }
 
-    @FXML
+    @Deprecated
     public void cancel(ActionEvent actionEvent) {
         txtPassword.setText("");
-        txtUser.setText("");
+        txtEmail.setText("");
         info.setText("");
         info.setStyle("-fx-background-color: transparent");
     }
@@ -75,4 +73,5 @@ public class LoginController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //HibernateUtil.getSessionFactory();
     }
+
 }
