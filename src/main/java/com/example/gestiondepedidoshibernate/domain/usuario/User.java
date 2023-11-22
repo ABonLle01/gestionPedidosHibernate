@@ -1,9 +1,14 @@
 package com.example.gestiondepedidoshibernate.domain.usuario;
 
+import com.example.gestiondepedidoshibernate.domain.pedido.Order;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -18,7 +23,8 @@ public class User implements Serializable {
     private String email;
     private String password;
 
-    //todo: Relacionar usuarios con productos y pedidos
+    @OneToMany(mappedBy = "usuario",fetch = FetchType.EAGER)
+    private List<Order> orders = new ArrayList<>(0);
 
 
 }

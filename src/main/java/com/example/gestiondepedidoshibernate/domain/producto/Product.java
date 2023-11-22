@@ -1,9 +1,12 @@
 package com.example.gestiondepedidoshibernate.domain.producto;
 
+import com.example.gestiondepedidoshibernate.domain.item.Item;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
@@ -11,18 +14,24 @@ import java.io.Serializable;
 public class Product implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_producto")
     private Long id;
     private String nombre;
     private int precio;
     @Column(name = "cantidad_disponible")
-    private int cantidad_dis;
+    private int cantidad;
 
-    //todo: Relacionar productos con usuarios
+    @OneToMany(mappedBy = "producto", fetch = FetchType.EAGER)
+    private List<Item> items = new ArrayList<>(0);
+
+
+
+
 
     public static void merge(Product origen, Product destino) {
         destino.setNombre(origen.getNombre());
         destino.setPrecio(origen.getPrecio());
-        destino.setCantidad_dis(origen.getCantidad_dis());
+        destino.setCantidad(origen.getCantidad());
     }
 
 

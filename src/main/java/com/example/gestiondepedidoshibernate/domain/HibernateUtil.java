@@ -11,7 +11,6 @@ public class HibernateUtil {
     static{
 
         try{
-
             Configuration cfg = new Configuration();
             cfg.configure();
 
@@ -20,7 +19,6 @@ public class HibernateUtil {
         } catch (Exception e) {
             log.severe("Error al crear SessionFactory()");
         }
-
 
     }
 

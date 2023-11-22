@@ -48,6 +48,9 @@ public class MainViewController {
     @javafx.fxml.FXML
     public void initialize() {
         lblNombre.setText(String.valueOf(Session.getCurentUser().getNombre()));
+        info.setText("");
+
+
 
 
 

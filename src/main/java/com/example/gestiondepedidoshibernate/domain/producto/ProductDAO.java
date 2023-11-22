@@ -31,7 +31,6 @@ public class ProductDAO implements DAO<Product> {
             System.out.println(data);
             salida=data;
         }catch (Exception ex){
-            //el programa no se para y devuelve null
             log.severe("Error al guardar el producto "+data.toString());
         }
 

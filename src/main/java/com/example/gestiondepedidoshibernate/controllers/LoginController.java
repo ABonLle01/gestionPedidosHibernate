@@ -33,7 +33,7 @@ public class LoginController implements Initializable {
         String pass = txtPassword.getText();
 
         if(email.length()<4 || pass.length()<4){
-            info.setText("Introduce los datos");
+            info.setText("Datos incompletos");
             info.setStyle("-fx-text-fill: red;");
 
         }else{

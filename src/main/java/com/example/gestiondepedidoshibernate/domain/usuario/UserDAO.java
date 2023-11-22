@@ -3,11 +3,13 @@ package com.example.gestiondepedidoshibernate.domain.usuario;
 import com.example.gestiondepedidoshibernate.domain.DAO;
 import com.example.gestiondepedidoshibernate.domain.HibernateUtil;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 
 import java.util.ArrayList;
 
 public class UserDAO implements DAO<User> {
+
     @Override
     public ArrayList<User> getAll() {
         var salida = new ArrayList<User>(0);
@@ -66,66 +68,4 @@ public class UserDAO implements DAO<User> {
     }
 
 
-
-
-
-
-
-
-
-    /*
-    private static Connection connection;
-
-    public UsuarioDAO() {
-        this.connection = DBConnection.getConnection();
-    }
-
-    @Override
-    public Usuario load(Long id) {
-        try {
-            String query = "SELECT * FROM usuarios WHERE id = ?";
-            PreparedStatement pst = connection.prepareStatement(query);
-            pst.setLong(1, id);
-
-            ResultSet resultSet = pst.executeQuery();
-
-            if (resultSet.next()) {
-                return new Usuario(
-                        resultSet.getLong("id"),
-                        resultSet.getString("nombre"),
-                        resultSet.getString("email"),
-                        resultSet.getString("password")
-                );
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-
-    public static Usuario login(String email, String password) {
-        try {
-            String query = "SELECT * FROM usuarios WHERE email = ? AND password = ?";
-            PreparedStatement preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, email);
-            preparedStatement.setString(2, password);
-
-            ResultSet resultSet = preparedStatement.executeQuery();
-
-            if (resultSet.next()) {
-                return new Usuario(
-                        resultSet.getLong("id"),
-                        resultSet.getString("nombre"),
-                        resultSet.getString("email"),
-                        resultSet.getString("password")
-                );
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-     */
 }
