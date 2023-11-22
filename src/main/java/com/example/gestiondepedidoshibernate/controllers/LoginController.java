@@ -34,22 +34,20 @@ public class LoginController implements Initializable {
 
         if(email.length()<4 || pass.length()<4){
             info.setText("Introduce los datos");
-            info.setStyle("-fx-background-color: red; -fx-text-fill: white;");
+            info.setStyle("-fx-text-fill: red;");
 
         }else{
             User u = (new UserDAO()).validateUser(email,pass);
 
             if(u==null) {
-                info.setText("No encontrado");
-                info.setStyle("-fx-background-color: red; -fx-text-fill: white;");
+                info.setText("Usuario no encontrado");
+                info.setStyle("-fx-text-fill: red;");
             }else{
-                info.setText("Usuario: "+email+"("+pass+") correcto");
-                info.setStyle("-fx-background-color: green; -fx-text-fill: white;");
 
                 Session.setCurentUser(u);
 
                 try {
-                    App.changeScene("main-view.fxml","Login");
+                    App.changeScene("main-view.fxml","Tabla de Pedidos");
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
@@ -61,17 +59,12 @@ public class LoginController implements Initializable {
 
     }
 
-    @Deprecated
-    public void cancel(ActionEvent actionEvent) {
-        txtPassword.setText("");
-        txtEmail.setText("");
-        info.setText("");
-        info.setStyle("-fx-background-color: transparent");
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //HibernateUtil.getSessionFactory();
+        info.setText("");
+
     }
 
 }

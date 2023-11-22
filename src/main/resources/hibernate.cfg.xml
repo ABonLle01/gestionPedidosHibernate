@@ -14,6 +14,6 @@
         <property name="show_sql">true</property>
 
         <mapping class="com.example.gestiondepedidoshibernate.domain.usuario.User"/>
-<!--        <mapping class="com.example.gestorjuegos.domain.juego.Game"/>-->
+        <mapping class="com.example.gestiondepedidoshibernate.domain.producto.Product"/>
     </session-factory>
 </hibernate-configuration>

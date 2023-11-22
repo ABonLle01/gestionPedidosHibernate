@@ -11,11 +11,10 @@ public class HibernateUtil {
     static{
 
         try{
-            //configurar la conexion de hibernate
+
             Configuration cfg = new Configuration();
             cfg.configure();
-            //se crea una conexion con el sf
-            //sf debe ser unico en tod0 el proyecto
+
             sf = cfg.buildSessionFactory();
             log.info("SessionFactory creada con exito!");
         } catch (Exception e) {

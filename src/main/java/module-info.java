@@ -14,6 +14,7 @@ module com.example.gestiondepedidoshibernate {
 
     opens com.example.gestiondepedidoshibernate.domain.usuario;
     opens com.example.gestiondepedidoshibernate.domain.pedido;
+    opens com.example.gestiondepedidoshibernate.domain.producto;
 
     exports com.example.gestiondepedidoshibernate;
     exports com.example.gestiondepedidoshibernate.controllers;

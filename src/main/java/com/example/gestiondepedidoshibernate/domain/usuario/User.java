@@ -18,5 +18,7 @@ public class User implements Serializable {
     private String email;
     private String password;
 
+    //todo: Relacionar usuarios con productos y pedidos
+
 
 }

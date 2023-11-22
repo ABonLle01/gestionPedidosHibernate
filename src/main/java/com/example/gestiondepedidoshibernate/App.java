@@ -15,7 +15,7 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         this.stage =stage;
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("login-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+        Scene scene = new Scene(fxmlLoader.load(), 900, 700);
         stage.setTitle("Login");
         stage.setScene(scene);
         stage.show();
@@ -23,7 +23,7 @@ public class App extends Application {
 
     public static void  changeScene(String fxml, String title) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml));
-        Scene scene = new Scene(fxmlLoader.load(), 800,600);
+        Scene scene = new Scene(fxmlLoader.load(), 900,700);
         stage.setTitle(title);
         stage.setScene(scene);
         stage.show();
