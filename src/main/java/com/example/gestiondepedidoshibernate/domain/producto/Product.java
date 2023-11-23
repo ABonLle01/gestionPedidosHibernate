@@ -14,16 +14,15 @@ import java.util.List;
 public class Product implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_producto")
     private Long id;
     private String nombre;
     private int precio;
     @Column(name = "cantidad_disponible")
     private int cantidad;
 
-    @OneToMany(mappedBy = "producto", fetch = FetchType.EAGER)
+  /* @OneToMany(mappedBy = "producto", fetch = FetchType.EAGER)
     private List<Item> items = new ArrayList<>(0);
-
+*/
 
 
 

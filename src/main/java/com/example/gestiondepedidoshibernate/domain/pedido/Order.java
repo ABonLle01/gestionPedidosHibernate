@@ -5,18 +5,20 @@ import com.example.gestiondepedidoshibernate.domain.usuario.User;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Data
 @Entity
 @Table(name = "pedidos")
-public class Order {
+public class Order implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_pedido")
     private Long id;
+
     @Column(name = "codigo_pedido")
     private Integer codigo;
     private String fecha;
@@ -25,6 +27,7 @@ public class Order {
     @ManyToOne
     @JoinColumn(name = "id_usuario")
     private User usuario;
+
 
     @OneToMany(mappedBy = "codigo", fetch = FetchType.EAGER)
     private List<Item> items = new ArrayList<>(0);

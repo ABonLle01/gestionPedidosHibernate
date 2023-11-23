@@ -8,13 +8,14 @@ module com.example.gestiondepedidoshibernate {
     requires java.naming;
     requires java.sql;
 
-    opens com.example.gestiondepedidoshibernate to javafx.fxml;
-    opens com.example.gestiondepedidoshibernate.controllers to javafx.fxml;
-    opens com.example.gestiondepedidoshibernate.domain to javafx.fxml;
+    opens com.example.gestiondepedidoshibernate;
+    opens com.example.gestiondepedidoshibernate.controllers;
+    opens com.example.gestiondepedidoshibernate.domain;
 
     opens com.example.gestiondepedidoshibernate.domain.usuario;
     opens com.example.gestiondepedidoshibernate.domain.pedido;
     opens com.example.gestiondepedidoshibernate.domain.producto;
+    opens com.example.gestiondepedidoshibernate.domain.item;
 
     exports com.example.gestiondepedidoshibernate;
     exports com.example.gestiondepedidoshibernate.controllers;

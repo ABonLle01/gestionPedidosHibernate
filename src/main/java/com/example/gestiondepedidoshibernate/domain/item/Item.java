@@ -14,12 +14,11 @@ public class Item implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_item")
     private Long id;
     private Integer cantidad;
 
     @ManyToOne
-    @JoinColumn(name = "codigo")
+    @JoinColumn(name = "codigo",referencedColumnName ="codigo_pedido")
     private Order codigo;
 
     @ManyToOne

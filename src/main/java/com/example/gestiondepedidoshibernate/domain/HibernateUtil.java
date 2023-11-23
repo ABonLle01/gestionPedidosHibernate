@@ -17,7 +17,9 @@ public class HibernateUtil {
             sf = cfg.buildSessionFactory();
             log.info("SessionFactory creada con exito!");
         } catch (Exception e) {
-            log.severe("Error al crear SessionFactory()");
+            log.severe("Error al crear SessionFactory");
+            System.out.println(e.getMessage());
+            e.printStackTrace();
         }
 
     }

@@ -41,8 +41,18 @@ public class MainViewController {
     private Label lblNombre;
     @javafx.fxml.FXML
     private Button btnCerrar;
-
-
+    @javafx.fxml.FXML
+    private Button btnActPedido;
+    @javafx.fxml.FXML
+    private Button btnAñaPedido;
+    @javafx.fxml.FXML
+    private Button btnBorrarPedido;
+    @javafx.fxml.FXML
+    private Button btnActProducto;
+    @javafx.fxml.FXML
+    private Button btnAñaProducto;
+    @javafx.fxml.FXML
+    private Button btnBorrarProducto;
 
 
     @javafx.fxml.FXML
@@ -67,4 +77,21 @@ public class MainViewController {
 
         App.changeScene("login-view.fxml","Login");
     }
+
+    @javafx.fxml.FXML
+    public void update(ActionEvent actionEvent) {
+
+    }
+
+    @javafx.fxml.FXML
+    public void add(ActionEvent actionEvent) {
+
+    }
+
+    @javafx.fxml.FXML
+    public void delete(ActionEvent actionEvent) {
+
+    }
+
+
 }

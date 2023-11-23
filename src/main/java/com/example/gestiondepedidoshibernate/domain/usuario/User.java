@@ -23,8 +23,17 @@ public class User implements Serializable {
     private String email;
     private String password;
 
+
     @OneToMany(mappedBy = "usuario",fetch = FetchType.EAGER)
     private List<Order> orders = new ArrayList<>(0);
 
+
+    @Transient
+    private Long ordersQuantity;
+
+    public Long getOrdersQuantity() {
+        ordersQuantity = (long) orders.size();
+        return ordersQuantity;
+    }
 
 }
