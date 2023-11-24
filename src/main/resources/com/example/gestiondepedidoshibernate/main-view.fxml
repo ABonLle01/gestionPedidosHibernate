@@ -30,17 +30,17 @@
                      <children>
                           <TableView fx:id="tblPedidos" onMouseClicked="#mostrarPedido" prefHeight="200.0" prefWidth="436.0" styleClass="table-view">
                               <columns>
-                                  <TableColumn fx:id="codigo" prefWidth="75.0" style="-fx-alignment: center;" text="Codigo de pedido">
+                                  <TableColumn fx:id="cCodigo" prefWidth="75.0" style="-fx-alignment: center;" text="Codigo de pedido">
                                       <cellValueFactory>
                                           <PropertyValueFactory property="nombre" />
                                       </cellValueFactory>
                                   </TableColumn>
-                                  <TableColumn fx:id="fecha" prefWidth="75.0" style="-fx-alignment: center;" text="Fecha">
+                                  <TableColumn fx:id="cFecha" prefWidth="75.0" style="-fx-alignment: center;" text="Fecha">
                                       <cellValueFactory>
                                           <PropertyValueFactory property="precio" />
                                       </cellValueFactory>
                                   </TableColumn>
-                                  <TableColumn fx:id="total" prefWidth="75.0" style="-fx-alignment: center;" text="Total">
+                                  <TableColumn fx:id="cTotal" prefWidth="75.0" style="-fx-alignment: center;" text="Total">
                                       <cellValueFactory>
                                           <PropertyValueFactory property="cantidad_disponible" />
                                       </cellValueFactory>
@@ -94,9 +94,9 @@
                      <children>
                         <TableView fx:id="tblProductos" prefHeight="200.0" prefWidth="437.0">
                           <columns>
-                              <TableColumn prefWidth="75.0" text="Producto" />
-                            <TableColumn prefWidth="75.0" text="Codigo de producto" />
-                            <TableColumn prefWidth="75.0" text="Cantidad" />
+                              <TableColumn fx:id="cProducto" prefWidth="75.0" text="Producto" />
+                            <TableColumn fx:id="cCodProducto" prefWidth="75.0" text="Codigo de producto" />
+                            <TableColumn fx:id="cCantidad" prefWidth="75.0" text="Cantidad" />
                           </columns>
                            <columnResizePolicy>
                               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

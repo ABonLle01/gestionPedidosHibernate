@@ -21,7 +21,7 @@ public class Order implements Serializable {
 
     @Column(name = "codigo_pedido")
     private Integer codigo;
-    private String fecha;
+    private Date fecha;
     private Integer total;
 
     @ManyToOne
@@ -31,5 +31,18 @@ public class Order implements Serializable {
 
     @OneToMany(mappedBy = "codigo", fetch = FetchType.EAGER)
     private List<Item> items = new ArrayList<>(0);
+
+
+    @Override
+    public String toString(){
+        return "Order{" +
+                "id= " + id +
+                "codigo= " + codigo +
+                "fecha= " + fecha +
+                "total= " + total +
+                "user= "+ usuario.getNombre() +
+                "}";
+    }
+
 
 }

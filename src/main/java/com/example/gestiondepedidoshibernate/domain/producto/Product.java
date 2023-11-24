@@ -20,9 +20,10 @@ public class Product implements Serializable{
     @Column(name = "cantidad_disponible")
     private int cantidad;
 
-  /* @OneToMany(mappedBy = "producto", fetch = FetchType.EAGER)
-    private List<Item> items = new ArrayList<>(0);
-*/
+    /*
+        @OneToMany(mappedBy = "producto", fetch = FetchType.EAGER)
+        private List<Item> items = new ArrayList<>(0);
+    */
 
 
 
