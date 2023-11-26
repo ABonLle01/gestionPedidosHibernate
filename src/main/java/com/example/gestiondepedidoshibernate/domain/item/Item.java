@@ -26,7 +26,4 @@ public class Item implements Serializable {
     private Product producto;
 
 
-
-
-
 }

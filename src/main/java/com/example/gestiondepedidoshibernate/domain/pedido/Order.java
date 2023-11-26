@@ -6,6 +6,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -21,7 +23,7 @@ public class Order implements Serializable {
 
     @Column(name = "codigo_pedido")
     private Integer codigo;
-    private Date fecha;
+    private LocalDate fecha;
     private Integer total;
 
     @ManyToOne
@@ -35,12 +37,12 @@ public class Order implements Serializable {
 
     @Override
     public String toString(){
-        return "Order{" +
-                "id= " + id +
-                "codigo= " + codigo +
-                "fecha= " + fecha +
-                "total= " + total +
-                "user= "+ usuario.getNombre() +
+        return "Order {" +
+                "Id = " + id +
+                ", Codigo = " + codigo +
+                ", Fecha = " + fecha +
+                ", Total = " + total +
+                ", Usuario = "+ usuario.getNombre() +
                 "}";
     }
 

@@ -7,6 +7,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class UserDAO implements DAO<User> {
 
@@ -20,6 +21,11 @@ public class UserDAO implements DAO<User> {
         }
 
         return salida;
+    }
+
+    @Override
+    public List<User> getAllByUserId(Long userId) {
+        return null;
     }
 
     @Override

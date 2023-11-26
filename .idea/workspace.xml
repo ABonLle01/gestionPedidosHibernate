@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="790e897e-3ae5-430d-b1f6-d9b497d33f28" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestiondepedidoshibernate/domain/pedido/OrderDAO.java" afterDir="false" />
+    <list default="true" id="790e897e-3ae5-430d-b1f6-d9b497d33f28" name="Changes" comment="relaciones">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestiondepedidoshibernate/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestiondepedidoshibernate/Session.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestiondepedidoshibernate/controllers/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestiondepedidoshibernate/controllers/MainViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestiondepedidoshibernate/domain/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestiondepedidoshibernate/domain/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestiondepedidoshibernate/domain/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestiondepedidoshibernate/domain/item/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestiondepedidoshibernate/domain/pedido/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestiondepedidoshibernate/domain/pedido/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestiondepedidoshibernate/domain/pedido/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestiondepedidoshibernate/domain/pedido/OrderDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestiondepedidoshibernate/domain/producto/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestiondepedidoshibernate/domain/producto/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestiondepedidoshibernate/domain/producto/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestiondepedidoshibernate/domain/producto/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestiondepedidoshibernate/domain/usuario/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestiondepedidoshibernate/domain/usuario/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestiondepedidoshibernate/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestiondepedidoshibernate/main-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,11 +60,12 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/AlvaroBonillaLledó/IdeaProjects/GestionDePedidos",
+    "last_opened_file_path": "C:/Users/alvar/IdeaProjects/GestorVideojuegos",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -94,8 +99,10 @@
       <workItem from="1700473542111" duration="3427000" />
       <workItem from="1700550265582" duration="2750000" />
       <workItem from="1700636601836" duration="5279000" />
-      <workItem from="1700732415827" duration="6959000" />
-      <workItem from="1700809791943" duration="5702000" />
+      <workItem from="1700673651466" duration="5138000" />
+      <workItem from="1700678830978" duration="623000" />
+      <workItem from="1700991137568" duration="7248000" />
+      <workItem from="1701012476407" duration="9966000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <option name="closed" value="true" />
@@ -113,35 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700565665550</updated>
     </task>
-    <task id="LOCAL-00003" summary="relacion2">
-      <option name="closed" value="true" />
-      <created>1700744711477</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1700744711477</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="a" />
     <MESSAGE value="b" />
-    <MESSAGE value="relacion2" />
-    <option name="LAST_COMMIT_MESSAGE" value="relacion2" />
+    <option name="LAST_COMMIT_MESSAGE" value="b" />
   </component>
 </project>
